@@ -4,6 +4,7 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://blog.christiankozalla.com",
+  base: "/blog",
   // output: "server",
   // adapter: node({
   //   mode: "standalone",
