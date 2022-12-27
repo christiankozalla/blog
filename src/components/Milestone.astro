@@ -1,0 +1,73 @@
+---
+const { milestone } = Astro.props;
+---
+
+<div id="container">
+  <div class="milestone-wrapper">
+    <span class="icon">
+      {milestone.icon}
+    </span>
+    <span class="milestone-meta">{milestone.meta}</span>
+  </div>
+  <div class="milestone-text">{milestone.text}</div>
+  <style define:vars={{ direction: milestone.direction }}>
+    #container {
+      display: flex;
+      flex-direction: var(--direction);
+      width: 100%;
+      margin: 1rem 0;
+      border-radius: 7px;
+      box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.3);
+    }
+
+    .milestone-meta {
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .milestone-wrapper {
+      position: relative;
+      padding: 0.5rem;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .milestone-text {
+      border-radius: 7px;
+      box-shadow: inset 0px 4px 10px -2px rgba(0, 0, 0, 0.3);
+      padding: 1rem;
+    }
+
+    .icon {
+      display: block;
+      height: 60px;
+      width: 60px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 2rem;
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 1rem 0;
+        border-radius: 7px;
+        box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.3);
+      }
+
+      .milestone-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .milestone-text {
+        border-radius: 0 0 7px 7px;
+      }
+    }
+  </style>
+</div>

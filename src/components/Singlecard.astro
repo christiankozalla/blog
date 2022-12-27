@@ -1,0 +1,195 @@
+---
+import type { ArticleFrontmatter } from '../lib/articles';
+
+interface Props {
+  post: ArticleFrontmatter;
+}
+const { post } = Astro.props;
+---
+
+<div class="card-container">
+  {
+    !post.imageUrl ? null : (
+      <div class="card-header">
+        {post.tags.map((tag) => {
+          return <span>{tag}</span>;
+        })}
+      </div>
+    )
+  }
+  <div class="card-body">
+    {
+      post.isInDb ? (
+        <h2>
+          <a class="link" href={`/posts/${post.id}`}>
+            {post.title}
+          </a>
+        </h2>
+      ) : (
+        <h2>
+          <span class="link">{post.title}</span>
+        </h2>
+      )
+    }
+    <div class="flex-row between">
+      <p class="small-italic">
+        {post.formattedDate} • {post.readingTime} min.
+      </p>
+      <img
+        class="avatar"
+        src="/images/Avatar_CK_min.jpg"
+        alt="Christians Avatar"
+      />
+    </div>
+    <p id="description">{post.description}</p>
+    <p id="read-more">
+      {
+        !post.isDummy ? (
+          <a id="read-more-anchor" class="link" href={`/posts/${post.id}`}>
+            Read more
+          </a>
+        ) : (
+          <a
+            class="link"
+            rel="noopener"
+            target="_blank"
+            href="https://twitter.com/CKozalla"
+            style={{
+              paddingRight: 8
+            }}
+          >
+            chrisko on <span style={{ verticalAlign: 'middle' }}>tw</span>
+          </a>
+        )
+      }
+    </p>
+  </div>
+  <!-- <div class="flex-row between small-italic" id="footer">
+        {post.isInDb ? (
+          <Fetchclientside id={post.id} />
+        ) : (
+          <>
+            <span>
+              <FiEye />
+            </span>
+            <span>
+              <FiHeart />
+            </span>
+          </>
+        )}
+      </div> -->
+  <style define:vars={{ 'image-url': `url(${post.imageUrl})` }}>
+    .card-container h2 {
+      margin: 0;
+    }
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 5px;
+      margin: 0.3rem 0.3rem;
+      box-shadow: 0 2px 8px #bbb;
+    }
+
+    .card-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-end;
+      background-image: var(--image-url);
+      background-position: center;
+      background-size: cover;
+      border-radius: 5px 5px 0 0;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+
+    .card-body {
+      flex-grow: 1;
+      padding: 1rem;
+    }
+
+    #description {
+      flex-grow: 2;
+      line-height: 2;
+    }
+
+    .card-header span {
+      padding: 0 0.7rem;
+      margin: 0.3rem;
+      border-radius: 3px;
+      color: white;
+      background-color: rgba(255, 33, 90, 0.8);
+    }
+
+    .small-italic {
+      font-size: 90%;
+      font-style: italic;
+    }
+
+    .avatar {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+    }
+
+    .flex-row {
+      align-items: center;
+    }
+
+    .around {
+      justify-content: space-around;
+    }
+
+    .between {
+      justify-content: space-between;
+    }
+
+    h2 {
+      margin-left: 0.7rem;
+    }
+
+    #read-more {
+      text-align: right;
+      font-style: italic;
+      margin: 0 0.5rem 0.5rem 0;
+    }
+
+    #read-more-anchor {
+      padding: 0.5rem 0.3rem;
+    }
+
+    .link {
+      padding: 0 3px 3px 3px;
+      background-image: linear-gradient(
+        transparent calc(100% - 15px),
+        rgba(36, 153, 209, 0.5)
+      );
+      background-size: 0 100%;
+      transition: background-size 0.35s cubic-bezier(0.42, 0, 0.58, 1) 0.1s;
+      background-repeat: no-repeat;
+      border-radius: 5px;
+    }
+
+    .link:hover,
+    .link:focus {
+      background-size: 100% 100%;
+    }
+
+    #footer {
+      border-top: 1px solid rgba(30, 30, 30, 0.4);
+      padding: 0 0.6rem;
+    }
+
+    #footer p {
+      margin: 0.2rem;
+    }
+
+    @media (max-width: 500px) {
+      .card-container {
+        margin: 0.3rem;
+      }
+    }
+  </style>
+</div>

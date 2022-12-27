@@ -1,0 +1,58 @@
+---
+import type { ArticleFrontmatter } from '../lib/articles';
+import Singlecard from './Singlecard.astro';
+import { format, parseISO } from 'date-fns';
+
+interface Props {
+  allPostsData: ArticleFrontmatter[];
+}
+
+const dummyCard = {
+  id: 'give-me-feedback',
+  title: 'Connect with me',
+  date: '2020-06-01',
+  formattedDate: format(parseISO('2020-06-01'), "do 'of' MMM ''yy"),
+  author: 'Christian Kozalla',
+  readingTime: '0',
+  shortTitle:
+    "As a young Blogger and Junior Web Developer I'm happy and grateful for your Feedback! If you like to connect with me longterm, follow me on Twitter! I'll tweet out every new post, there. Hope you enjoy my blog!",
+  description:
+    "As a young Blogger and Junior Web Developer I'm happy and grateful for your Feedback! If you like to connect with me longterm, follow me on Twitter! I'll tweet out every new post, there. Hope you enjoy my blog!",
+  imageUrl: '/images/Coding-Screen-2.jpg',
+  tags: ['Propose', 'new', 'Topics'],
+  isInDb: false,
+  isDummy: true
+};
+
+// to fill empty space if there is an odd number of cards displayed - so there are always two Singlecards per row on a wide screen
+const { allPostsData } = Astro.props;
+allPostsData.length % 2 !== 0 ? allPostsData.push(dummyCard) : null;
+---
+
+<div>
+  <div class="flex-row">
+    {allPostsData.map((post) => <Singlecard post={post} />)}
+  </div>
+  <style>
+    .flex-row {
+      width: 100%;
+      flex-wrap: wrap;
+      font-size: 85%;
+      margin-top: 0.7rem;
+    }
+
+    h1 {
+      font-weight: 600;
+      padding-left: 0.5rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      opacity: 0.8;
+      margin: 0.5rem 0;
+    }
+
+    @media (max-width: 500px) {
+      .flex-row {
+        font-size: 100%;
+      }
+    }
+  </style>
+</div>

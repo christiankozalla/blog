@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://chrisko.io/sitemap.xml
