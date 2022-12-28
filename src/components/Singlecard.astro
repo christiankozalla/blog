@@ -21,7 +21,7 @@ const { post } = Astro.props;
     {
       post.isInDb ? (
         <h2>
-          <a class="link" href={`/posts/${post.id}`}>
+          <a class="link" href={`${import.meta.env.BASE_URL}posts/${post.id}`}>
             {post.title}
           </a>
         </h2>
@@ -37,7 +37,7 @@ const { post } = Astro.props;
       </p>
       <img
         class="avatar"
-        src="/images/Avatar_CK_min.jpg"
+        src={`${import.meta.env.BASE_URL}images/Avatar_CK_min.jpg`}
         alt="Christians Avatar"
       />
     </div>
@@ -45,7 +45,11 @@ const { post } = Astro.props;
     <p id="read-more">
       {
         !post.isDummy ? (
-          <a id="read-more-anchor" class="link" href={`/posts/${post.id}`}>
+          <a
+            id="read-more-anchor"
+            class="link"
+            href={`${import.meta.env.BASE_URL}posts/${post.id}`}
+          >
             Read more
           </a>
         ) : (
@@ -78,7 +82,7 @@ const { post } = Astro.props;
           </>
         )}
       </div> -->
-  <style define:vars={{ 'image-url': `url(${post.imageUrl})` }}>
+  <style define:vars={{ 'image-url': `url(/blog${post.imageUrl})` }}>
     .card-container h2 {
       margin: 0;
     }

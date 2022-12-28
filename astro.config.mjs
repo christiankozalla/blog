@@ -4,14 +4,14 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://blog.christiankozalla.com",
-  base: "/blog",
+  base: "/blog/",
+  outDir: "./dist",
   // output: "server",
   // adapter: node({
   //   mode: "standalone",
   // }),
-  outDir: "./dist",
-  server: {
-    host: true,
-    port: 3000,
-  },
+  // server: {
+  //   host: true,
+  //   port: 3000,
+  // },
 });
