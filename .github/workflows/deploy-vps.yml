@@ -2,7 +2,7 @@
 #
 # To get started with Astro see: https://docs.astro.build/en/getting-started/
 #
-name: VPS - Deploy Astro site
+name: VPS Deploy Astro site
 
 on:
   # Runs on pushes targeting the default branch
@@ -89,6 +89,6 @@ jobs:
         run: |
           which ssh-agent || ( apt-get install -qq openssh-client )
           eval $(ssh-agent -s)
-          ssh-add <(echo ${{ secrets.GH_DEPLOY_KEY }})
+          ssh-add <(echo "${{ secrets.GH_DEPLOY_KEY }}")
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
           rsync --recursive --delete --dry-run --verbose ${{ env.BUILD_PATH }}/dist/ ${{ secrets.VPS_HOST }}:/var/www/sites/${{ github.repository }}/production
