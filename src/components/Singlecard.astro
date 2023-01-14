@@ -82,7 +82,7 @@ const { post } = Astro.props;
           </>
         )}
       </div> -->
-  <style define:vars={{ 'image-url': `url(/blog${post.imageUrl})` }}>
+  <style define:vars={{ 'image-url': `url(${post.imageUrl})` }}>
     .card-container h2 {
       margin: 0;
     }

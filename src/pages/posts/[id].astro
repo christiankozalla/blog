@@ -16,16 +16,14 @@ try {
   }
   post = await getPostData(id);
 } catch (e) {
-  return Astro.redirect('/blog/posts');
+  return Astro.redirect('/posts');
 }
 ---
 
 <Layout title={post.title}>
   <div id="post-header">
     <img
-      src={post.imageUrl
-        ? `/blog${post.imageUrl}`
-        : `${import.meta.env.BASE_URL}images/chrisko-exo-large.png`}
+      src={post.imageUrl || '/images/chrisko-exo-large.png'}
       alt="Post Header Image"
     />
     {
