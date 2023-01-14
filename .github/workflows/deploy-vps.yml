@@ -92,4 +92,5 @@ jobs:
           mkdir -p ~/.ssh
           ssh-add <(echo "${{ secrets.GH_DEPLOY_KEY }}")
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-          rsync --recursive --delete --dry-run --verbose ${{ env.BUILD_PATH }}/dist/ ${{ secrets.VPS_HOST }}:/var/www/sites/${{ github.repository }}/production
+          echo "${{ env.BUILD_PATH }}/dist/"
+          rsync --recursive --delete --verbose ${{ env.BUILD_PATH }}/dist/ ${{ secrets.VPS_HOST }}:/var/www/sites/${{ github.repository }}/production
