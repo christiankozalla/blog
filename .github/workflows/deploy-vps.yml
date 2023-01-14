@@ -2,7 +2,7 @@
 #
 # To get started with Astro see: https://docs.astro.build/en/getting-started/
 #
-name: VPS: Deploy Astro site
+name: VPS - Deploy Astro site
 
 on:
   # Runs on pushes targeting the default branch
