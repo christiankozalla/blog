@@ -69,10 +69,11 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v1
-      #   with:
-      #     path: ${{ env.BUILD_PATH }}/dist
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          name: dist
+          path: ${{ env.BUILD_PATH }}/dist
 
   deploy:
     # environment:
@@ -82,6 +83,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy to VPS
     steps:
+      - name: Download from Build
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
       - name: Deploy to VPS
         id: deployment
         # uses: actions/deploy-pages@v1
