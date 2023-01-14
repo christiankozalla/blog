@@ -25,7 +25,7 @@ concurrency:
 
 env:
   BUILD_PATH: "." # default value when not using subfolders
-  # BUILD_PATH: subfolder
+  SITE_URL: "https://christiankozalla.com"
 
 jobs:
   build:
@@ -57,17 +57,13 @@ jobs:
           node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v2
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+            --site "${{ env.SITE_URL }}"
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-artifact@v3
