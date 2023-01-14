@@ -87,10 +87,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist
-        working-directory: ${{ env.BUILD_PATH }}
       - name: Deploy to VPS
         id: deployment
-        # uses: actions/deploy-pages@v1
         # directory in the server /var/www/sites/<GH_USER_NAME>/<REPO_NAME>/production
         working-directory: ${{ env.BUILD_PATH }}
         shell: bash
