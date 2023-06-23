@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://chrisko.io/sitemap.xml
+Sitemap: https://christiankozalla.com/sitemap-0.xml
