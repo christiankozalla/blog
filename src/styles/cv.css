@@ -87,6 +87,10 @@ progress::-webkit-progress-value {
     margin-top: 0 !important;
 }
 
+.list-disc li {
+    @apply mb-2;
+}
+
 .list-custom li {
     font-style: italic;
     margin-top: 0.4rem;
