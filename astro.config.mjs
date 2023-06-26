@@ -6,5 +6,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://christiankozalla.com",
   outDir: "./dist",
-  integrations: [tailwind(), sitemap()]
+  integrations: [tailwind({
+    applyBaseStyles: false,
+  }), sitemap()]
 });
