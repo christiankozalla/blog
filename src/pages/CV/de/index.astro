@@ -428,18 +428,18 @@ import "../../../styles/cv.css";
                     <hr class="mt-8 mb-12" />
                     <div id="projects" class="prose page-break-before">
                         <h2 class="section-headline">Projekte</h2>
-                        <div class="mb-16">
+                        <div class="mb-16 page-break-not-internal">
                             <h3 id="sitzplan-headline" class="font-semibold mb-2">School Seating Plan</h3>
                             <p class="text-sm italic ml-10">In der Entwicklung</p>
                             <section class="mb-6">
                                 <h3 class="hidden">Beschreibung</h3>
                                 <div
-                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic my-4 px-2"
                                 >
                                     App für Lehrer, um einen Sitzplan zu
                                     erstellen
                                 </div>
-                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                <div class="lg:inline-block lg:w-8/12 w-full my-4">
                                     <p class="mb-2">Lehrer können einen völlig
                                     benutzer-definierten Sitzplan erstellen.
                                     Schüler und Tische können per Drag-n-Drop
@@ -508,10 +508,9 @@ import "../../../styles/cv.css";
                                 </div>
                                 <div class="lg:inline-block lg:w-8/12 w-full">
                                     <a
-                                        class="block pb-2"
+                                        class="block pb-2 underline text-green-500"
                                         href="https://github.com/christiankozalla/sitzplan"
                                         target="_blank"
-                                        class="underline text-green-500"
                                         rel="noopener noreferrer"
                                     >
                                         GitHub/sitzplan (App)
@@ -530,10 +529,9 @@ import "../../../styles/cv.css";
                                 </div>
                                 <div class="lg:inline-block lg:w-8/12 w-full">
                                     <a
-                                        class="block pb-2"
+                                        class="block pb-2 underline text-green-500"
                                         href="https://github.com/christiankozalla/sitzplan-landing"
                                         target="_blank"
-                                        class="underline text-green-500"
                                         rel="noopener noreferrer"
                                     >
                                         GitHub/sitzplan-landing (Landing Page)
@@ -612,70 +610,121 @@ import "../../../styles/cv.css";
                                 </div>
                             </section>
                         </div>
-                        <!-- <div class="mb-16 page-break-not-internal">
-              <h3 id="chrisko-headline">Mein Blog</h3>
-              <section class="mb-6">
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Blog:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  Mein Blog ist das Zentrum meines Online-Auftritts. Hier
-                  schreibe ich Posts über kürzlich Gelerntes, Tutorials oder
-                  meine Erfahrung in der Web-Entwicklung.
-                </div>
-              </section>
-              <section class="mb-6">
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Online unter:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  <a
-                    href="https://christiankozalla.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Mein Blog</a
-                  >
-                </div>
-              </section>
-              <section class="mb-6">
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Code auf:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  <a
-                    href="https://github.com/christiankozalla/blog"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >GitHub/blog</a
-                  >
-                </div>
-              </section>
-              <section class="mb-6">
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Features:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  <ul class="m-ul">
-                    <li>Statisches Rendern einer React App mit Next.js</li>
-                    <li>Artikel in Markdown verfasst</li>
-                    <li><s>Zähler für Seitenaufrufe und Likes</s></li>
-                    <li>Titelbilder der Artikel mit Inkscape erstellt</li>
-                    <li>SEO</li>
-                  </ul>
-                </div>
-              </section>
 
-              <section class="mb-6">
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Erstellt mit:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  <span class="rounded-xl bg-gray-300 px-3">Astro</span>
-                  <span class="rounded-xl bg-gray-300 px-3">CSS</span>
-                  <span class="rounded-xl bg-gray-300 px-3">Markdown</span>
-                </div>
-              </section>
-            </div> -->
+                        <div class="mb-16 page-break-not-internal">
+                            <h3 id="sitzplan-headline" class="font-semibold mb-2">Stock Trend Strategy</h3>
+                            <p class="text-sm italic ml-10">In der Entwicklung</p>
+                            <section class="mb-6">
+                                <h3 class="hidden">Beschreibung</h3>
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic px-4 my-4"
+                                >
+                                    Berechnung von Kauf-Signalen basierend auf dem Elder-Force-Index (EMA + MACD)
+    
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full my-4">
+                                    <p class="mb-2">
+                                        <strong>Deno App + React Frontend</strong><br>
+                                        OHLC-Tageskerzen der Aktien des S&P500 und NASDAQ100 werden von der Alpaca API täglich heruntergeladen
+                                        Basierend auf den OHLC-Tageskerzen werden Kauf-Signale berechnet und in einer SQLite Datenbank persistiert.
+                                        Die Signale können im Frontend mit verschiedenen Parametern (Risk-Reward-Ratio, Ausstiegs-Kriterien) 'backtested' werden, um die Performance der Signale zu auszuwerten.
+                                        Aktuell wird der Aktien-Chart im React Frontend mithilfe der Library Google-Charts angezeigt. 
+                                    </p>
+                                </div>
+                            </section>
+                            <section class="mb-6">
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Online hier:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <a
+                                        href="https://stock-trends.christiankozalla.com"
+                                        target="_blank"
+                                        class="underline text-green-500"
+                                        rel="noopener noreferrer"
+                                        >App (stock-trends.christiankozalla.com)</a
+                                    >
+                                </div>
+                            </section>
+                            <section class="mb-6">
+                                <h3 class="hidden">
+                                    Stock Trend Strategy Code Repository
+                                </h3>
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Code auf:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <a
+                                        class="block pb-2 underline text-green-500"
+                                        href="https://github.com/christiankozalla/stock-trend-strategy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        GitHub/stock-trend-strategy
+                                    </a>
+                                </div>
+                            </section>
+                            <section class="mb-6">
+                                <h3 class="hidden">
+                                    Stock Trend Strategy Details
+                                </h3>
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Features:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <ul>
+                                        <li>
+                                            Anbindung an Alpaca API
+                                        </li>
+                                        <li>
+                                            Cron Job zum täglichen Download der Aktien-Kurse, persistieren auf dem Datei-System, Berechnung der Signale und persistieren in SQLite
+                                        </li>
+                                        <li>
+                                            GitHub Action zum Deployment auf dem Server
+                                        </li>
+                                        <li>Anzeige der Aktien-Kurse mit Google-Charts Library</li>
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <section class="mb-6">
+                                <h3 class="hidden">
+                                    Stock Trend Strategy ist gebaut mit
+                                </h3>
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Gebaut mit:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >React</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >TypeScript</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Deno</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >SQLite</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >GitHub Actions</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Caddy</span
+                                    >
+                                </div>
+                            </section>
+                        </div>
+                        
 
                         <hr class="mt-8 mb-12" />
                         <div id="skills" class="prose">

@@ -524,10 +524,9 @@ import "../../styles/cv.css";
                                         class="lg:inline-block lg:w-8/12 w-full"
                                     >
                                         <a
-                                            class="block pb-2"
+                                            class="block pb-2 underline text-green-500"
                                             href="https://github.com/christiankozalla/sitzplan"
                                             target="_blank"
-                                            class="underline text-green-500"
                                             rel="noopener noreferrer"
                                         >
                                             GitHub/sitzplan (App)
@@ -548,10 +547,9 @@ import "../../styles/cv.css";
                                         class="lg:inline-block lg:w-8/12 w-full"
                                     >
                                         <a
-                                            class="block pb-2"
+                                            class="block pb-2 underline text-green-500"
                                             href="https://github.com/christiankozalla/sitzplan-landing"
                                             target="_blank"
-                                            class="underline text-green-500"
                                             rel="noopener noreferrer"
                                         >
                                             GitHub/sitzplan-landing (Landing
@@ -645,74 +643,77 @@ import "../../styles/cv.css";
                                     </div>
                                 </section>
                             </section>
-                            <!-- <div class="mb-16 page-break-not-internal">
-              <h3 id="chrisko-headline">My blog</h3>
-              <section class="mb-6">
-                <h3 class="hidden">Project Description for my blog</h3>
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Personal blog:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  My blog is the center of my online presence. Here, I share
-                  posts about what I've learnt, tutorials and my thoughts on web
-                  development in general.
-                </div>
-              </section>
-              <section class="mb-6">
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Deployed to:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  <a
-                    href="https://christiankozalla.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >my blog</a
-                  >
-                </div>
-              </section>
-              <section class="mb-6">
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Code on:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  <a
-                    href="https://github.com/christiankozalla/blog"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >GitHub/blog</a
-                  >
-                </div>
-              </section>
-              <section class="mb-6">
-                <h3 class="hidden">My blog's features</h3>
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Features:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  <ul class="m-ul">
-                    <li>Static generation</li>
-                    <li>Blog content written in Markdown</li>
-                    <li><s>Counter for pageviews and likes</s></li>
-                    <li>Featured images made with Inkscape</li>
-                    <li>SEO</li>
-                  </ul>
-                </div>
-              </section>
 
-              <section class="mb-6">
-                <h3 class="hidden">Tools I used to build my blog</h3>
-                <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
-                  Built with:
-                </div>
-                <div class="lg:inline-block lg:w-8/12 w-full">
-                  <span class="rounded-xl bg-gray-300 px-3">Astro</span>
-                  <span class="rounded-xl bg-gray-300 px-3">CSS</span>
-                  <span class="rounded-xl bg-gray-300 px-3">Markdown</span>
-                </div>
-              </section>
-            </div> 
-                    </div> -->
+                            <div class="mb-16 page-break-not-internal">
+                                <h3 id="sitzplan-headline" class="font-semibold mb-2">Stock Trend Strategy</h3>
+                                <p class="text-sm italic ml-10">In Development</p>
+                                <section class="mb-6">
+                                    <h3 class="hidden">Description</h3>
+                                    <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                        Calculation of Buy Signals based on the Elder Force Index (EMA + MACD)
+                                    </div>
+                                    <div class="lg:inline-block lg:w-8/12 w-full">
+                                        <p class="mb-2">
+                                            <strong>Deno App + React Frontend</strong><br>
+                                            OHLC daily candles of S&P500 and NASDAQ100 stocks are downloaded daily from the Alpaca API.
+                                            Based on the OHLC daily candles, buy signals are calculated and persisted in an SQLite database.
+                                            The signals can be 'backtested' in the frontend with various parameters (Risk-Reward Ratio, Exit Criteria) to evaluate signal performance.
+                                            Currently, the stock chart is displayed in the React frontend using the Google-Charts library.
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="mb-6">
+                                    <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                        Available online here:
+                                    </div>
+                                    <div class="lg:inline-block lg:w-8/12 w-full">
+                                        <a href="https://stock-trends.christiankozalla.com" target="_blank" class="underline text-green-500"
+                                            rel="noopener noreferrer">App (stock-trends.christiankozalla.com)</a>
+                                    </div>
+                                </section>
+                                <section class="mb-6">
+                                    <h3 class="hidden">Stock Trend Strategy Code Repository</h3>
+                                    <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                        Code on:
+                                    </div>
+                                    <div class="lg:inline-block lg:w-8/12 w-full">
+                                        <a class="block pb-2 underline text-green-500"
+                                            href="https://github.com/christiankozalla/stock-trend-strategy" target="_blank"
+                                            rel="noopener noreferrer">
+                                            GitHub/stock-trend-strategy
+                                        </a>
+                                    </div>
+                                </section>
+                                <section class="mb-6">
+                                    <h3 class="hidden">Stock Trend Strategy Details</h3>
+                                    <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                        Features:
+                                    </div>
+                                    <div class="lg:inline-block lg:w-8/12 w-full">
+                                        <ul>
+                                            <li>Integration with Alpaca API</li>
+                                            <li>Cron Job for daily download of stock prices, persistence on the file system, signal calculation, and persistence in SQLite</li>
+                                            <li>GitHub Action for deployment on the server</li>
+                                            <li>Display of stock prices using Google-Charts Library</li>
+                                        </ul>
+                                    </div>
+                                </section>
+                                <section class="mb-6">
+                                    <h3 class="hidden">Stock Trend Strategy is built with</h3>
+                                    <div class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2">
+                                        Built with:
+                                    </div>
+                                    <div class="lg:inline-block lg:w-8/12 w-full">
+                                        <span class="rounded-xl bg-gray-300 px-3">React</span>
+                                        <span class="rounded-xl bg-gray-300 px-3">TypeScript</span>
+                                        <span class="rounded-xl bg-gray-300 px-3">Deno</span>
+                                        <span class="rounded-xl bg-gray-300 px-3">SQLite</span>
+                                        <span class="rounded-xl bg-gray-300 px-3">GitHub Actions</span>
+                                        <span class="rounded-xl bg-gray-300 px-3">Caddy</span>
+                                    </div>
+                                </section>
+                            </div>
+                            
                             <hr class="mt-8 mb-12" />
                             <div id="skills" class="prose">
                                 <h2 class="section-headline">
