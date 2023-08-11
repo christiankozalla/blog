@@ -96,6 +96,10 @@ progress::-webkit-progress-value {
     margin-right: 12px;
 }
 
+ul.list-disc {
+    margin-left: 24px;
+}
+
 .m-ul {
     margin-top: 0 !important;
 }
