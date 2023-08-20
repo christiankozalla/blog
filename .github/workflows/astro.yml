@@ -96,4 +96,4 @@ jobs:
           ssh-add <(echo "${{ secrets.GH_DEPLOY_KEY }}")
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
           echo "${{ env.BUILD_PATH }}/dist/"
-          rsync --recursive --delete --verbose ${{ env.BUILD_PATH }}/dist/ ${{ secrets.VPS_HOST }}:/var/www/sites/${{ github.repository }}/production
+          rsync --recursive --delete --verbose --exclude='boersenampel.json' ${{ env.BUILD_PATH }}/dist/ ${{ secrets.VPS_HOST }}:/var/www/sites/${{ github.repository }}/production
