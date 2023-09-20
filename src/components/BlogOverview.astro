@@ -1,6 +1,6 @@
 ---
-import BlogOverviewItem from './BlogOverviewItem.astro';
-import type { ArticleFrontmatter } from '../lib/articles.js';
+import BlogOverviewItem from "./BlogOverviewItem.astro";
+import type { ArticleFrontmatter } from "../lib/articles.js";
 
 const { allPostsData } = Astro.props;
 ---
@@ -16,40 +16,48 @@ const { allPostsData } = Astro.props;
   <div>
     {
       allPostsData.map((post: ArticleFrontmatter) => (
-        <BlogOverviewItem post={post} key={post.id} />
+        <div class="blog-item-wrapper" id={post.id}>
+          <BlogOverviewItem post={post} key={post.id} />
+        </div>
       ))
     }
   </div>
 </div>
-<!-- {
-      !searchTerm ? (
-        allPostsData.slice(0, 5).map((post) => {
-          return <BlogOverviewItem post={post} key={post.id} />;
-        })
-      ) : allPostsData.filter((post) => {
-          let searchTermLower = searchTerm.toLowerCase();
-          return (
-            post.title.toLowerCase().includes(searchTermLower) ||
-            post.shortTitle.toLowerCase().includes(searchTermLower)
-          );
-        }).length === 0 ? (
-        <div id="nothing-found">Your query didn't match any posts...</div>
-      ) : (
-        allPostsData
-          .filter((post) => {
-            let searchTermLower = searchTerm.toLowerCase();
-            return (
-              post.title.toLowerCase().includes(searchTermLower) ||
-              post.shortTitle.toLowerCase().includes(searchTermLower)
-            );
-          })
-          .map((filteredPost) => {
-            return (
-              <BlogOverviewItem post={filteredPost} key={filteredPost.id} />
-            );
-          })
-      )
-    } -->
+<script define:vars={{ allPostsData }}>
+const hideItems = (item) => {
+  item.style.display = "none";
+};
+const showItems = (item) => {
+  item.style.display = "block";
+};
+const searchInput = document.getElementById("search-input");
+const allBlogItems = document.querySelectorAll(".blog-item-wrapper");
+searchInput?.addEventListener("input", (e) => {
+  // @ts-ignore - value exists on input type="search"
+  const searchTerm = e.target?.value;
+  if (typeof searchTerm !== "string" || searchTerm.length < 3) {
+    allBlogItems.forEach(showItems);
+    return;
+  }
+
+  const postsToHide = allPostsData.filter((post) => {
+    let searchTermLower = searchTerm.toLowerCase();
+    return !(
+      post.title.toLowerCase().includes(searchTermLower) ||
+      post.shortTitle.toLowerCase().includes(searchTermLower) ||
+      post.description.toLowerCase().includes(searchTermLower)
+    );
+  });
+
+  postsToHide
+    .map((post) => {
+      const el = document.getElementById(post.id);
+      return el;
+    })
+    .filter(Boolean)
+    .forEach(hideItems);
+});
+</script>
 
 <style>
   h2 {
