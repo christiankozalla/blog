@@ -112,14 +112,15 @@ ul.list-disc {
     @apply mb-2;
 }
 
-.list-custom li {
-    font-style: italic;
-    margin-top: 0.4rem;
+.list-custom > li {
+    font-weight: bold;
+    margin-top: 0.6rem;
 }
 
-.list-custom li::before {
-    content: "#";
-    font-style: italic;
+li ul {
+    font-weight: normal;
+    list-style:circle;
+    margin-left: 32px;
 }
 
 @media print {

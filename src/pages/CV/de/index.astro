@@ -2,7 +2,7 @@
 import "../../../styles/cv.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
     <head>
         <meta charset="UTF-8" />
@@ -49,7 +49,9 @@ import "../../../styles/cv.css";
                                     class="inline w-6 mr-4"
                                     alt="Mail icon"
                                 />
-                                <a href="mailto:christian.kozalla@gmail.com" class="underline"
+                                <a
+                                    href="mailto:christian.kozalla@gmail.com"
+                                    class="underline"
                                     >christian.kozalla@gmail.com</a
                                 >
                             </div>
@@ -71,7 +73,7 @@ import "../../../styles/cv.css";
                                 <div>
                                     <address class="not-italic">
                                         Waldenburger Str. 10<br />
-                                        08371 Glauchau
+                                         08371 Glauchau
                                     </address>
                                 </div>
                             </div>
@@ -180,17 +182,58 @@ import "../../../styles/cv.css";
                         <h2 class="text-xl font-semibold mb-4">
                             Skills & Tools
                         </h2>
-                        <p>Ich arbeite regelmäßig mit</p>
                         <ul class="list-none ml-2 list-custom">
-                            <li>JavaScript</li>
-                            <li>TypeScript</li>
-                            <li>Vue, Vuex</li>
-                            <li>Nuxt</li>
-                            <li>SCSS</li>
-                            <li>Node.js</li>
-                            <li>GraphQL</li>
-                            <li>Jest</li>
-                            <li>GitLab</li>
+                            <li>
+                                Frontend <ul>
+                                    <li>Vue 2/3</li>
+                                    <li>Nuxt 2/3</li>
+                                    <li>React</li>
+                                    <li>Astro</li>
+                                    <li>(S)CSS</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Backend <ul>
+                                    <li>Node.js</li>
+                                    <li>Deno</li>
+                                    <li>Express, Nest.js</li>
+                                    <li>Prisma ORM</li>
+                                    <li>SQLite, PostgreSQL, MongoDB</li>
+                                    <li>Python, FastAPI</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Software Development
+                                <ul>
+                                    <li>TypeScript, JavaScript</li>
+                                    <li>Web APIs / Web Plattform</li>
+                                    <li>Jest, Vitest</li>
+                                    <li>Cypress</li>
+                                    <li>Gherkin BDD</li>
+                                </ul>
+                            </li>
+                            <li>
+                                CMS
+                                <ul>
+                                    <li>Strapi</li>
+                                    <li>Contentful</li>
+                                    <li>Sanity</li>
+                                </ul>
+                            </li>
+                            <li>
+                                DevOps
+                                <ul>
+                                    <li>Ubuntu</li>
+                                    <li>GitHub Actions</li>
+                                    <li>Gitlab CI</li>
+                                    <li>Docker</li>
+                                    <li>Caddy</li>
+                                    <li>PM2</li>
+                                    <li>Systemd</li>
+                                    <li>SFTP, SCP, Rsync</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
 
@@ -229,14 +272,14 @@ import "../../../styles/cv.css";
                     <div id="profile" class="prose">
                         <h2 class="section-headline">Profil</h2>
                         <p>
-                            Als Web-Developer liegt mein Fokus im Frontend. Im
+                            Als Web-Developer liegt mein Fokus in der Front- und Backend-Entwicklung. Im
                             Job arbeite ich hauptsächlich mit JavaScript,
                             TypeScript und SCSS in Vue, Nuxt und Nest.js, privat
                             probiere ich gerne neue Frameworks wie Astro aus,
-                            und setze eigene Projekte mit Docker, Vite, esbuild,
+                            und setze eigene Projekte mit Python, Docker, Vite, esbuild,
                             Node.js oder Deno um.
                         </p>
-                        <p>
+                        <p class="mt-4">
                             Ich bin höchst motiviert meine Kenntnisse und
                             Fähigkeiten jeden Tag zu erweitern, um
                             Code-Wartbarkeit, -Testbarkeit und Nutzer-Experience
@@ -247,7 +290,9 @@ import "../../../styles/cv.css";
                     <div id="experience" class="prose">
                         <h2 class="section-headline">Erfahrung</h2>
                         <div>
-                            <h3 class="font-semibold mb-2">i22 Digitalagentur GmbH</h3>
+                            <h3 class="font-semibold mb-2">
+                                i22 Digitalagentur GmbH
+                            </h3>
                             <section class="mb-6">
                                 <div
                                     class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
@@ -364,22 +409,23 @@ import "../../../styles/cv.css";
                                         <li>
                                             Weiterentwicklung einer Vue App, die
                                             zur Content-Pflege eines E-Commerce
-                                            Shops genutzt wird. Mit der Vue App ist
-                                            es möglich, neue Produktseiten für den
-                                            Online-Shop zu erstellen oder bestehende
-                                            Produktseiten zu aktualisieren. Der
-                                            eingegebene Content wird in Form von
-                                            PHP-Arrays ausgegeben, die vom
-                                            Web-Server zum Rendern einer
-                                            Produktseite in HTML-Templates
-                                            eingebunden werden.
+                                            Shops genutzt wird. Mit der Vue App
+                                            ist es möglich, neue Produktseiten
+                                            für den Online-Shop zu erstellen
+                                            oder bestehende Produktseiten zu
+                                            aktualisieren. Der eingegebene
+                                            Content wird in Form von PHP-Arrays
+                                            ausgegeben, die vom Web-Server zum
+                                            Rendern einer Produktseite in
+                                            HTML-Templates eingebunden werden.
                                         </li>
                                         <li>
                                             Weiterentwicklung und Wartung des
                                             Frontends eines E-Commerce Shops mit
-                                            SCSS und JavaScript. Verbesserung der
-                                            DX, Aktualisierung veralteter Tools und
-                                            Verbesserung der Web-Vitals des Shops.
+                                            SCSS und JavaScript. Verbesserung
+                                            der DX, Aktualisierung veralteter
+                                            Tools und Verbesserung der
+                                            Web-Vitals des Shops.
                                         </li>
                                     </ul>
                                 </div>
@@ -429,8 +475,15 @@ import "../../../styles/cv.css";
                     <div id="projects" class="prose page-break-before">
                         <h2 class="section-headline">Projekte</h2>
                         <div class="mb-16 page-break-not-internal">
-                            <h3 id="sitzplan-headline" class="font-semibold mb-2">School Seating Plan</h3>
-                            <p class="text-sm italic ml-10">In der Entwicklung</p>
+                            <h3
+                                id="sitzplan-headline"
+                                class="font-semibold mb-2"
+                            >
+                                School Seating Plan
+                            </h3>
+                            <p class="text-sm italic ml-10">
+                                In der Entwicklung
+                            </p>
                             <section class="my-6">
                                 <h3 class="hidden">Beschreibung</h3>
                                 <div
@@ -439,15 +492,21 @@ import "../../../styles/cv.css";
                                     App für Lehrer, um einen Sitzplan zu
                                     erstellen
                                 </div>
-                                <div class="lg:inline-block lg:w-8/12 w-full my-4">
-                                    <p class="mb-2">Lehrer können einen völlig
-                                    benutzer-definierten Sitzplan erstellen.
-                                    Schüler und Tische können per Drag-n-Drop
-                                    angeordnet werden. Die App bietet zudem eine
-                                    Auto-Verteilungs-Funktion, die die
-                                    Schüler:innen anhand bestimmter Bedingungen
-                                    anordnet. Die Bedingungen können vom Lehrer
-                                    für jeden Schüler eingegeben werden:</p>
+                                <div
+                                    class="lg:inline-block lg:w-8/12 w-full my-4"
+                                >
+                                    <p class="mb-2">
+                                        Lehrer können einen völlig
+                                        benutzer-definierten Sitzplan erstellen.
+                                        Schüler und Tische können per
+                                        Drag-n-Drop angeordnet werden. Die App
+                                        bietet zudem eine
+                                        Auto-Verteilungs-Funktion, die die
+                                        Schüler:innen anhand bestimmter
+                                        Bedingungen anordnet. Die Bedingungen
+                                        können vom Lehrer für jeden Schüler
+                                        eingegeben werden:
+                                    </p>
                                     <ul class="list-disc">
                                         <li>
                                             Schüler:in muss in der ersten oder
@@ -462,8 +521,8 @@ import "../../../styles/cv.css";
                                             an
                                         </li>
                                     </ul>
-                                    Die Nutzer können ihren Sitzplan über die URL
-                                    teilen oder als PDF speichern.
+                                     Die Nutzer können ihren Sitzplan über die
+                                    URL teilen oder als PDF speichern.
                                 </div>
                             </section>
                             <section class="mb-6">
@@ -612,23 +671,44 @@ import "../../../styles/cv.css";
                         </div>
 
                         <div class="mb-16 page-break-not-internal">
-                            <h3 id="sitzplan-headline" class="font-semibold mb-2">Stock Trend Strategy</h3>
-                            <p class="text-sm italic ml-10">In der Entwicklung</p>
+                            <h3
+                                id="sitzplan-headline"
+                                class="font-semibold mb-2"
+                            >
+                                Stock Trend Strategy
+                            </h3>
+                            <p class="text-sm italic ml-10">
+                                In der Entwicklung
+                            </p>
                             <section class="my-6">
                                 <h3 class="hidden">Beschreibung</h3>
                                 <div
                                     class="lg:inline-block lg:w-3/12 lg:align-top italic px-4 my-4"
                                 >
-                                    Berechnung von Kauf-Signalen basierend auf dem Elder-Force-Index (EMA + MACD)
-    
+                                    Berechnung von Kauf-Signalen basierend auf
+                                    dem Elder-Force-Index (EMA + MACD)
                                 </div>
-                                <div class="lg:inline-block lg:w-8/12 w-full my-4">
+                                <div
+                                    class="lg:inline-block lg:w-8/12 w-full my-4"
+                                >
                                     <p class="my-2">
-                                        <strong>Deno App + React Frontend</strong><br>
-                                        OHLC-Tageskerzen der Aktien des S&P500 und NASDAQ100 werden von der Alpaca API täglich heruntergeladen.
-                                        Basierend auf den OHLC-Tageskerzen werden Kauf-Signale berechnet und in einer SQLite Datenbank persistiert.
-                                        Die Signale können im Frontend mit verschiedenen Parametern (Risk-Reward-Ratio, Ausstiegs-Kriterien) 'backtested' werden, um die Performance der Signale zu auszuwerten.
-                                        Aktuell wird der Aktien-Chart im React Frontend mithilfe der Library Google-Charts angezeigt. 
+                                        <strong
+                                            >Deno Worker + FastAPI server +
+                                            React Frontend</strong
+                                        ><br />
+                                         OHLC-Tageskerzen der Aktien des S&P500
+                                        und NASDAQ100 werden von der Alpaca API
+                                        täglich heruntergeladen. Basierend auf
+                                        den OHLC-Tageskerzen werden Kauf-Signale
+                                        berechnet und in einer SQLite Datenbank
+                                        persistiert. Die Signale können im
+                                        Frontend mit verschiedenen Parametern
+                                        (Risk-Reward-Ratio, Ausstiegs-Kriterien)
+                                        'backtested' werden, um die Performance
+                                        der Signale zu auszuwerten. Aktuell wird
+                                        der Aktien-Chart im React Frontend
+                                        mithilfe der Library Google-Charts
+                                        angezeigt.
                                     </p>
                                 </div>
                             </section>
@@ -679,16 +759,26 @@ import "../../../styles/cv.css";
                                 </div>
                                 <div class="lg:inline-block lg:w-8/12 w-full">
                                     <ul class="list-disc">
+                                        <li>Anbindung an Alpaca API</li>
                                         <li>
-                                            Anbindung an Alpaca API
+                                            Cron Job zum täglichen Download der
+                                            Aktien-Kurse, persistieren auf dem
+                                            Datei-System, Berechnung der Signale
+                                            und persistieren in SQLite
                                         </li>
                                         <li>
-                                            Cron Job zum täglichen Download der Aktien-Kurse, persistieren auf dem Datei-System, Berechnung der Signale und persistieren in SQLite
+                                            GitHub Action zum Deployment auf dem
+                                            Server
                                         </li>
                                         <li>
-                                            GitHub Action zum Deployment auf dem Server
+                                            Anzeige der Aktien-Kurse mit einem
+                                            SVG-Chart, gebaut mit Visx Library
                                         </li>
-                                        <li>Anzeige der Aktien-Kurse mit Google-Charts Library</li>
+                                        <li>
+                                            Anzeige der generierten Signale
+                                            einer Aktie & Backtest-Chart der
+                                            Signale
+                                        </li>
                                     </ul>
                                 </div>
                             </section>
@@ -713,6 +803,12 @@ import "../../../styles/cv.css";
                                         >Deno</span
                                     >
                                     <span class="rounded-xl bg-gray-300 px-3"
+                                        >Python, FastAPI</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >PostgreSQL</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
                                         >SQLite</span
                                     >
                                     <span class="rounded-xl bg-gray-300 px-3"
@@ -724,7 +820,6 @@ import "../../../styles/cv.css";
                                 </div>
                             </section>
                         </div>
-                        
 
                         <hr class="mt-8 mb-12" />
                         <div id="skills" class="prose">
@@ -740,7 +835,8 @@ import "../../../styles/cv.css";
                                 <ul class="m-ul list-disc">
                                     <li>Testing, z.B. mit Jest, Cypress</li>
                                     <li>
-                                        Backend-Entwicklung mit JS/TS, Golang, Docker, SQL
+                                        Backend-Entwicklung mit JS/TS, Golang,
+                                        Docker, SQL
                                     </li>
                                     <li>GitHub Actions, GitLab CI</li>
                                     <li>
