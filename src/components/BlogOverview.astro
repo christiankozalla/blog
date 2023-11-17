@@ -24,39 +24,37 @@ const { allPostsData } = Astro.props;
   </div>
 </div>
 <script define:vars={{ allPostsData }}>
-const hideItems = (item) => {
-  item.style.display = "none";
-};
-const showItems = (item) => {
-  item.style.display = "block";
-};
-const searchInput = document.getElementById("search-input");
-const allBlogItems = document.querySelectorAll(".blog-item-wrapper");
-searchInput?.addEventListener("input", (e) => {
-  // @ts-ignore - value exists on input type="search"
-  const searchTerm = e.target?.value;
-  if (typeof searchTerm !== "string" || searchTerm.length < 3) {
-    allBlogItems.forEach(showItems);
-    return;
-  }
+  const hideItems = (item) => {
+    item.style.display = "none";
+  };
+  const showItems = (item) => {
+    item.style.display = "block";
+  };
+  const searchInput = document.getElementById("search-input");
+  const allBlogItems = document.querySelectorAll(".blog-item-wrapper");
+  searchInput?.addEventListener("input", (e) => {
+    // @ts-ignore - value exists on input type="search"
+    const searchTerm = e.target?.value;
+    if (typeof searchTerm !== "string" || searchTerm.length < 3) {
+      allBlogItems.forEach(showItems);
+      return;
+    }
 
-  const postsToHide = allPostsData.filter((post) => {
-    let searchTermLower = searchTerm.toLowerCase();
-    return !(
-      post.title.toLowerCase().includes(searchTermLower) ||
-      post.shortTitle.toLowerCase().includes(searchTermLower) ||
-      post.description.toLowerCase().includes(searchTermLower)
+    // let searchTermLower = searchTerm.toLowerCase();
+    searchRegex = new RegExp(searchTerm, "i");
+    const postsToHide = allPostsData.filter(
+      (post) =>
+        !(searchRegex.test(post.title) || searchRegex.test(post.description) || searchRegex.test(post.shortDescription)),
     );
-  });
 
-  postsToHide
-    .map((post) => {
-      const el = document.getElementById(post.id);
-      return el;
-    })
-    .filter(Boolean)
-    .forEach(hideItems);
-});
+    postsToHide
+      .map((post) => {
+        const el = document.getElementById(post.id);
+        return el;
+      })
+      .filter(Boolean)
+      .forEach(hideItems);
+  });
 </script>
 
 <style>

@@ -1,17 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import BlogIntroduction from '../components/BlogIntroduction.astro';
-import BlogOverview from '../components/BlogOverview.astro';
-import About from '../components/About.astro';
-import { getSortedPostsData } from '../lib/articles.js';
+import Layout from "../layouts/Layout.astro";
+import BlogIntroduction from "../components/BlogIntroduction.astro";
+import BlogOverview from "../components/BlogOverview.astro";
+import About from "../components/About.astro";
+import { getSortedPostsData } from "../lib/articles.js";
 
-const introduction = 'Hi there! Christian here 👋';
+const introduction = "Hi there! Christian here 👋";
 const subintroduction =
-  'I like to deepen my skills in TypeScript, Node.js, Docker and Go. In order to solve problems.';
+  "I like to code in TypeScript, Node.js, Deno, Python and Go. In order to solve problems.";
 
-const title = 'Christian Kozalla - Web Developer';
+const title = "Christian Kozalla - Web Developer";
 const description =
-  'I like to deepen my skills in TypeScript, Node.js, Docker and Go. In order to solve problems.';
+  "I like to code in TypeScript, Node.js, Deno, Python and Go. In order to solve problems.";
 
 const allPostsData = getSortedPostsData();
 ---
