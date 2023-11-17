@@ -139,10 +139,10 @@ Inside our `handleFormData` method we are simply putting the form data passed fr
   <child-component @form-submitted="handleFormSubmit" />
 ```
 
-### A more advanced example of using custom events in Vue is covered in the second part of my [Vue Quiz App Tutorial](https://chrisko.io/posts/vue-tutorial-build-a-frontend-quiz-app-with-custom-events)
+### A more advanced example of using custom events in Vue is covered in the second part of my [Vue Quiz App Tutorial](https://christiankozalla.com/posts/vue-tutorial-build-a-frontend-quiz-app-with-custom-events)
 
 ## More Ressources
 
-- [Vue App Tutorial Part 1: Build a Frontend Quiz App](https://chrisko.io/posts/vue-tutorial-frontend-quiz-app-headsup)
+- [Vue App Tutorial Part 1: Build a Frontend Quiz App](https://christiankozalla.com/posts/vue-tutorial-frontend-quiz-app-headsup)
 - [Event Handling in Vue Cheatsheet](https://learnvue.co/2020/01/a-vue-event-handling-cheatsheet-the-essentials/)
 - [Difference between `preventDefault()` and `stopPropagation()`](https://itnext.io/preventdefault-vs-stoppropagation-3631de9fe1c6)

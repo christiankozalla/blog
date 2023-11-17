@@ -11,7 +11,7 @@
 
 # Vue Tutorial Part II: Build a Frontend Quiz App
 
-> This is a followup post on [Vue Tutorial: Build a Frontend Quiz App](https://chrisko.io/posts/vue-tutorial-frontend-quiz-app-headsup). We are building a Vue Frontend Quiz App _from scratch_ or using the [Starter Code](https://github.com/christiankozalla/vue-quiz-tutorial). The second part extends this Quiz App with a modal shown when the user finishes the quiz displaying his score. :fire:
+> This is a followup post on [Vue Tutorial: Build a Frontend Quiz App](https://christiankozalla.com/posts/vue-tutorial-frontend-quiz-app-headsup). We are building a Vue Frontend Quiz App _from scratch_ or using the [Starter Code](https://github.com/christiankozalla/vue-quiz-tutorial). The second part extends this Quiz App with a modal shown when the user finishes the quiz displaying his score. :fire:
 
 ### Check out a live preview of the [Quiz App](https://vue-quiz-app.christiankozalla.vercel.app/)
 
@@ -184,7 +184,7 @@ The content consists of `modal-header`, `modal-body` and `modal-footer` as sibli
 
 We're putting two props `header` and `subheader` to the Modal component to make is reusable. The third prop we need is the user's score i.e. `quizScore` which we will receive from the Quiz component's _custom event_.
 
-> A quick revision of custom events in Vue is [here](https://chrisko.io/posts/emit-events-in-vue-to-pass-data-between-components)
+> A quick revision of custom events in Vue is [here](https://christiankozalla.com/posts/emit-events-in-vue-to-pass-data-between-components)
 
 Here is the additional content for the Modal component: Replace the empty `div.modal-body` with this.
 
@@ -532,8 +532,8 @@ In conclusion, to extend the existing quiz from Vue Tutorial Part I with a Modal
 
 ### Additional Resources
 
-- [Vue Tutorial Part I: Build a Frontend Quiz App](https://chrisko.io/posts/vue-tutorial-frontend-quiz-app-headsup)
-- [Emitting Events in Vue](https://chrisko.io/posts/emit-events-in-vue-to-pass-data-between-components)
+- [Vue Tutorial Part I: Build a Frontend Quiz App](https://christiankozalla.com/posts/vue-tutorial-frontend-quiz-app-headsup)
+- [Emitting Events in Vue](https://christiankozalla.com/posts/emit-events-in-vue-to-pass-data-between-components)
 - [The Vue Cookbook](https://vuejs.org/v2/cookbook/)
 - [Vetur - Vue tooling for VS Code](https://github.com/vuejs/vetur)
 - [Vue Tutorial: An Overview and Walkthrough](https://www.taniarascia.com/getting-started-with-vue/)

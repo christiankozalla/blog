@@ -697,4 +697,4 @@ Happy coding!
 
 ## More Resources
 
-- [Vue Tutorial Part II: Build a Frontend Quiz App](https://chrisko.io/posts/vue-tutorial-build-a-frontend-quiz-app-with-custom-events)
+- [Vue Tutorial Part II: Build a Frontend Quiz App](https://christiankozalla.com/posts/vue-tutorial-build-a-frontend-quiz-app-with-custom-events)

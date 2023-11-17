@@ -62,14 +62,14 @@ Just replace the examples with your original content and the message you want to
 
 > The Image should be square and at least 120x120px, but less than 1MB size
 
-## Example: The Summary Card of chrisko.io
+## Example: The Summary Card of christiankozalla.com
 
 <p align="center">
   <img src="/images/how-to-preview-your-website-shared-on-social-media-with-meta-tags/example-card.png" alt="Social Media Card Example" width="100%" />
   <figcaption style="padding-top: 0; padding-left: 2rem; font-style: italic">Fig 1: Social Media Summary Card</figcaption>
 </p>
 
-Here is the Summary Card of _chrisko.io_ previewed on the [Twitter Card Validator](https://cards-dev.twitter.com/validator) - I use this tool to test my pages' social media cards before going _live_
+Here is the Summary Card of _christiankozalla.com_ previewed on the [Twitter Card Validator](https://cards-dev.twitter.com/validator) - I use this tool to test my pages' social media cards before going _live_
 
 Facebook offers a similar tool: [The Sharing Debugger](https://developers.facebook.com/tools/debug/)
 
@@ -96,7 +96,7 @@ Here is what I'd recommend for several popular frameworks
 
 In this tutorial we generate boilerplate HTML meta tags for social media cards like used to preview URLs shared on Twitter or Facebook.
 
-We looked at an example summary card of _chrisko.io_.
+We looked at an example summary card of _christiankozalla.com_.
 
 Most valuable, we collected tools to enhance the process of adding meta tags to your website to make it look great when shared on social media! :rocket:
 
