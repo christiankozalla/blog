@@ -91,7 +91,7 @@ Enter the dependency array!
 With the dependency array you get fine-grained control about _when_ the effect should run. The dependency array is passed as the (optional) second argument to the useEffect hook.
 
 - If you don't pass a dependency array, the effect will run on every render.
-- If you pass an empty array, the effect will run on every render.
+- If you pass an empty array, the effect will run only on first render.
 - If you pass an array with state variables, the effect will run only when at least one of these variables changes.
 
 ## Run the effect only on first render
