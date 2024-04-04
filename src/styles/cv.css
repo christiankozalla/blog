@@ -62,7 +62,7 @@ progress::-webkit-progress-value {
     position: relative;
     bottom: -8px;
     content: "";
-    background-image: url("./assets/chrisko-icon.png");
+    background-image: url("../../public/images/chrisko-icon.png");
     background-position: center;
     background-size: contain;
     margin-right: 12px;
@@ -76,7 +76,7 @@ progress::-webkit-progress-value {
     position: relative;
     bottom: -8px;
     content: "";
-    background-image: url("./assets/mealio-icon.png");
+    background-image: url("../../public/images/mealio-icon.png");
     background-position: center;
     background-size: contain;
     margin-right: 12px;
@@ -89,7 +89,7 @@ progress::-webkit-progress-value {
     position: relative;
     bottom: -4px;
     content: "";
-    background-image: url("./assets/headsup-logo.svg");
+    background-image: url("../../public/images/headsup-logo.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
