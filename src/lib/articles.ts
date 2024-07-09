@@ -108,6 +108,7 @@ export async function getPostData(
       padSpaceAfter: true,
       emoticon: false,
     })
+    // @ts-ignore - because remark-prism v1.3.6 is not yet type-compatible with remark v15 but `build` still works
     .use(prism)
     .process(matterResult.content);
   const content = processedContent.toString();
