@@ -129,6 +129,13 @@ const { title } = Astro.props;
           .footer-content {
             width: 100vw;
             box-sizing: border-box;
+            flex-wrap: wrap;
+          }
+
+          .footer-content div {
+            order: 1;
+            width: 100%;
+            text-align: center;
           }
         }
       </style>
@@ -168,7 +175,7 @@ const { title } = Astro.props;
       </div>
       <div class="footer">
         <div class="footer-content">
-          {new Date().getUTCFullYear()} Christian Kozalla
+          <div>{new Date().getUTCFullYear()} Christian Kozalla</div>
           <a
             href="https://github.com/christiankozalla"
             rel="noopener noreferrer"
