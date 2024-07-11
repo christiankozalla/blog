@@ -26,7 +26,7 @@
 
 ### modd.conf
 
-```
+```bash
 # modd.conf
 **/*.go {
     daemon +sigterm: "CGO_ENABLED=0 go run main.go serve"
@@ -35,7 +35,7 @@
 
 ### Caddyfile.dev
 
-```Caddyfile
+```yaml
 # Caddyfile.dev
 http://localhost:3000 {
         # PocketBase
@@ -48,7 +48,7 @@ http://localhost:3000 {
 
 ### Procfile
 
-```procfile
+```yaml
 # For Development only
 # Used with [Hivemind](https://evilmartians.com/opensource/hivemind)
 # Install Hivemind and run `hivemind` from the project root to start development
