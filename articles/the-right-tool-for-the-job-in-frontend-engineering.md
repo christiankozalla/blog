@@ -46,7 +46,7 @@ But **careful**! There are things to consider:
 
 > Random dev: _"I am building my **blog with React!**"_ <br/> Everyone screaming: _"Nooooooo!"_ or _"Why the hell?!"_
 
-Actually, I felt confronted with the problem of choosing the right framework for a web project, when I thought about why I learnt [React - of all frontend frameworks - so early on my journey?](/posts/picking-a-frontend-framework-as-a-beginner).
+Actually, I felt confronted with the problem of choosing the right framework for a web project, when I thought about why I learnt [React - of all frontend frameworks - so early on my journey?](/posts/picking-a-frontend-framework-as-beginner).
 
 The ongoing hype around React gives clueless beginners the impression, React might be the solution to all frontend-related problems.
 
