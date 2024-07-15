@@ -33,7 +33,7 @@ Because...
     class="post__image"
   />
   <figcaption>
-    <em>So many tools to choose from!?</em> <br/> <span class="small-fonts">Photo by <a href="https://unsplash.com/@barnimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Barn Images</a> on <a href="/s/photos/workshop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
+    <em>So many tools to choose from!?</em> <br/> <span class="small-fonts">Photo by <a href="https://unsplash.com/@barnimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Barn Images</a> on <a href="https://unsplash.com">Unsplash</a></span>
   
   </figcaption>
 </figure>
