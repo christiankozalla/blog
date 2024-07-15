@@ -81,7 +81,7 @@ const Container = ({ children }) => {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href="/posts">
+          <Link href="/posts/">
             <a>Blog</a>
           </Link>
           <div className="nav-right">
