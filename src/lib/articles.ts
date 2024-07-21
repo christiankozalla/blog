@@ -60,13 +60,7 @@ export function getSortedPostsData() {
     } as ArticleFrontmatter;
   });
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  return allPostsData.sort((a, b) => a.date < b.date ? 1 : -1);
 }
 
 export function getAllPostIds() {

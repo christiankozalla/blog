@@ -48,10 +48,7 @@ const { allPostsData } = Astro.props;
     );
 
     postsToHide
-      .map((post) => {
-        const el = document.getElementById(post.id);
-        return el;
-      })
+      .map((post) => document.getElementById(post.id))
       .filter(Boolean)
       .forEach(hideItems);
   });
