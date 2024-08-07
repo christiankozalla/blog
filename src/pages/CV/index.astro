@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import "../../styles/cv.css";
 ---
 
@@ -14,6 +15,7 @@ import "../../styles/cv.css";
         <link rel="canonical" href={Astro.url.toString()} />
 
         <title>Christian Kozalla | CV</title>
+        <ViewTransitions />
     </head>
 
     <body class="font-sans antialiased w-full">
