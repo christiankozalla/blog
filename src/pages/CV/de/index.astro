@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 import "../../../styles/cv.css";
 ---
 
@@ -76,7 +76,7 @@ import "../../../styles/cv.css";
                                 />
                                 <div>
                                     <address class="not-italic">
-                                         08371 Glauchau
+                                        08371 Glauchau
                                     </address>
                                 </div>
                             </div>
@@ -276,12 +276,13 @@ import "../../../styles/cv.css";
                     <div id="profile" class="prose">
                         <h2 class="section-headline">Profil</h2>
                         <p>
-                            Als Web-Developer liegt mein Fokus in der Front- und Backend-Entwicklung. Im
-                            Job arbeite ich hauptsächlich mit JavaScript,
-                            TypeScript und SCSS in Vue, Nuxt und Nest.js, privat
-                            probiere ich gerne neue Frameworks wie Astro aus,
-                            und setze eigene Projekte mit Python, Docker, Vite, esbuild,
-                            Node.js oder Deno um.
+                            Als Web-Developer liegt mein Fokus in der Front- und
+                            Backend-Entwicklung. Im Job arbeite ich
+                            hauptsächlich mit JavaScript, TypeScript und SCSS in
+                            Vue, Nuxt und Nest.js, privat probiere ich gerne
+                            neue Frameworks wie Astro aus, und setze eigene
+                            Projekte mit Python, Docker, Vite, esbuild, Node.js
+                            oder Deno um.
                         </p>
                         <p class="mt-4">
                             Ich bin höchst motiviert meine Kenntnisse und
@@ -295,13 +296,75 @@ import "../../../styles/cv.css";
                         <h2 class="section-headline">Erfahrung</h2>
                         <div>
                             <h3 class="font-semibold mb-2">
+                                GK Software - retail7
+                            </h3>
+                            <section class="mb-6">
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Seit August&nbsp;2024:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    Developer
+                                </div>
+                            </section>
+                            <section class="mb-6">
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Aufgaben:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <ul class="list-disc">
+                                        <li>
+                                            Weiterentwicklung der Kassensoftware für Mobile und Desktop POS
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="mb-6">
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Tools:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >TypeScript</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Less</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Vue</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >PostgreSQL</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Docker</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Electron</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >GitLab</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Jira</span
+                                    >
+                                </div>
+                            </section>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">
                                 i22 Digitalagentur GmbH
                             </h3>
                             <section class="mb-6">
                                 <div
                                     class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
                                 >
-                                    Seit Juli&nbsp;2022:
+                                    Juli&nbsp;2022 - Juli&nbsp;2024
                                 </div>
                                 <div class="lg:inline-block lg:w-8/12 w-full">
                                     Frontend Developer
@@ -338,7 +401,8 @@ import "../../../styles/cv.css";
                                             bereitzustellen.
                                         </li>
                                         <li>
-                                            Weiterentwicklung von E-Commerce Features im Frontend
+                                            Weiterentwicklung von E-Commerce
+                                            Features im Frontend
                                         </li>
                                     </ul>
                                 </div>
@@ -518,8 +582,8 @@ import "../../../styles/cv.css";
                                             an
                                         </li>
                                     </ul>
-                                     Die Nutzer können ihren Sitzplan über die
-                                    URL teilen oder als PDF speichern.
+                                    Die Nutzer können ihren Sitzplan über die URL
+                                    teilen oder als PDF speichern.
                                 </div>
                             </section>
                             <section class="mb-6">
@@ -693,19 +757,17 @@ import "../../../styles/cv.css";
                                             >Deno Worker + FastAPI server +
                                             React Frontend</strong
                                         ><br />
-                                         OHLC-Tageskerzen der Aktien des S&P500
-                                        und NASDAQ100 werden von der Alpaca API
-                                        täglich heruntergeladen. Basierend auf
-                                        den OHLC-Tageskerzen werden Kauf-Signale
-                                        berechnet und in einer SQLite Datenbank
-                                        persistiert. Die Signale können im
-                                        Frontend mit verschiedenen Parametern
+                                        OHLC-Tageskerzen der Aktien des S&P500 und
+                                        NASDAQ100 werden von der Alpaca API täglich
+                                        heruntergeladen. Basierend auf den OHLC-Tageskerzen
+                                        werden Kauf-Signale berechnet und in einer
+                                        SQLite Datenbank persistiert. Die Signale
+                                        können im Frontend mit verschiedenen Parametern
                                         (Risk-Reward-Ratio, Ausstiegs-Kriterien)
-                                        'backtested' werden, um die Performance
-                                        der Signale zu auszuwerten. Aktuell wird
-                                        der Aktien-Chart im React Frontend
-                                        mithilfe der Library Google-Charts
-                                        angezeigt.
+                                        'backtested' werden, um die Performance der
+                                        Signale zu auszuwerten. Aktuell wird der
+                                        Aktien-Chart im React Frontend mithilfe der
+                                        Library Google-Charts angezeigt.
                                     </p>
                                 </div>
                             </section>
