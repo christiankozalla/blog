@@ -8,5 +8,10 @@ export default defineConfig({
   outDir: "./dist",
   integrations: [tailwind({
     applyBaseStyles: false,
-  }), sitemap()]
+  }), sitemap()],
+  vite: {
+    build: {
+      assetsInlineLimit: 1024
+    }
+  }
 });
