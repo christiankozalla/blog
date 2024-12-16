@@ -1,7 +1,7 @@
 ---
-import '../../styles/prism.css';
-import Layout from '../../layouts/Layout.astro';
-import { getAllPostIds, getPostData } from '../../lib/articles.js';
+import "../../styles/prism.css";
+import Layout from "../../layouts/Layout.astro";
+import { getAllPostIds, getPostData } from "../../lib/articles.js";
 
 export function getStaticPaths() {
   return getAllPostIds();
@@ -9,21 +9,13 @@ export function getStaticPaths() {
 
 const { id } = Astro.params;
 
-let post;
-try {
-  if (!id) {
-    throw new Error('ID is undefined');
-  }
-  post = await getPostData(id);
-} catch (e) {
-  return Astro.redirect('/posts/');
-}
+const post = await getPostData(id);
 ---
 
 <Layout title={post.title}>
   <div id="post-header">
     <img
-      src={post.imageUrl || '/images/chrisko-exo-large.png'}
+      src={post.imageUrl || "/images/chrisko-exo-large.png"}
       alt="Post Header Image"
     />
     {

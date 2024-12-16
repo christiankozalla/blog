@@ -67,7 +67,9 @@ export function getSortedPostsData() {
 }
 
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(postsDirectory, { withFileTypes: true })
+    .filter((dirent) => dirent.isFile())
+    .map(dirent => dirent.name);
 
   return fileNames.map((fileName) => {
     return {
