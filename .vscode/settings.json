@@ -1,10 +1,10 @@
 {
   "editor.formatOnSave": false,
   "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.maxTokenizationLineLength": 2500
   },
   "[astro]": {
