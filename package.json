@@ -10,7 +10,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "copy-cv-pages": "rm -rf ./docs/_astro ./docs/CV ./docs/images && cp -r ./dist/images ./dist/CV ./dist/_astro ./docs/",
-    "prepare-deploy": "npm run build && npm run copy-cv-pages && touch ./docs/.nojekyll"
+    "prepare-deploy": "npm run build && npm run copy-cv-pages"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.1.2",
