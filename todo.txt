@@ -1,0 +1,19 @@
+# Migration of christiankozalla.com to Github pages
+
+# aka teardown Contabo VPS
+
+## Running on legacy Contabo VPS
+
+- christiankozalla.com ::MIGRATED::
+
+- stock-trends.christiankozalla.com 
+    Dependencies: Python backend, Daily cron job, Deno, static React frontend
+
+- seaty.christiankozalla.com - completely static - not a MUST HAVE (Github repo enough)
+
+- its.christiankozalla.com - migrate IF THERE IS TIME to another VPS. Make a DEMO ACCOUNT which has some dummy data inside..
+    Or make some proper screenshots and put them on the repos README
+
+- calendar app -> no need, because it is the outdated web-based frontend
+
+---> Remove links to those projects from CV
