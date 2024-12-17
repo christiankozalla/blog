@@ -1,0 +1,223 @@
+:root {
+  --columns: 10;
+  --rows: 10;
+  --space: 8px;
+  --color-primary-lightest: rgb(224, 243, 245); /* #e0f3f5 */
+  --color-primary-lighter: rgb(205, 236, 238); /* #cdecee*/
+  --color-primary-light: rgb(128, 206, 213); /* #80ced5*/
+  --color-primary-dark: rgb(49, 181, 212);
+  --color-warning: rgb(243, 194, 39);
+  --color-attention: rgb(236, 71, 26);
+  --text-grey-200: rgb(229, 231, 235);
+  --text-grey-300: rgb(209, 213, 219);
+  --text-grey-400: rgb(156, 163, 175);
+  --text-grey-700: rgb(55, 65, 81);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-xl: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+#root {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  color: #3a3a3a;
+}
+
+button,
+input,
+ul,
+ol {
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+*:focus {
+  outline: 1px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+input[type="text"] {
+  border: none;
+  padding: 0 4px;
+  color: var(--text-grey-700);
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  border-radius: var(--space);
+}
+
+input[type="text"]::placeholder {
+  color: var(--text-grey-400);
+}
+
+input[type="checkbox"] {
+  display: block;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.checkbox-container {
+  position: relative;
+  width: 50px;
+  height: 32px;
+  border-radius: 50px;
+  background-color: var(--color-primary-lightest);
+  box-shadow: inset 0 0 6px var(--color-primary-light);
+  overflow: hidden;
+  margin-left: var(--space);
+}
+
+.checkbox-control {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  background-color: var(--color-primary-light);
+  position: absolute;
+  z-index: 1;
+}
+
+input[type="checkbox"]:not(:checked) + .checkbox-control {
+  top: 5px;
+  left: 4px;
+}
+
+input[type="checkbox"]:checked + .checkbox-control {
+  background-color: var(--color-primary-dark);
+  top: 5px;
+  left: 24px;
+}
+
+select {
+  border: none;
+  padding: var(--space);
+  color: var(--text-grey-700);
+  font-weight: bold;
+  min-width: 200px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: var(--space);
+  background-color: var(--color-primary-dark);
+  color: white;
+  font-weight: bold;
+  padding: var(--space) calc(2 * var(--space));
+}
+
+button:active {
+  outline-color: var(--color-attention);
+}
+
+button[disabled] {
+  background-color: var(--text-grey-400);
+  cursor: not-allowed;
+}
+
+button[disabled]:focus,
+button[disabled]:active {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-light);
+}
+
+/* Utilities */
+.screenReaderOnly:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}

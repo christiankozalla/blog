@@ -1,0 +1,14 @@
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-inline-end: calc(2 * var(--space));
+}
+
+@media screen and (max-width: 700px) {
+  .layout {
+    flex-direction: column-reverse;
+    margin-inline-end: 0;
+  }
+}

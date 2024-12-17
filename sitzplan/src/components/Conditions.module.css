@@ -1,0 +1,104 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 50px;
+  grid-template-areas:
+    "studentList studentEditor"
+    "footer footer";
+  gap: calc(2 * var(--space));
+  height: 100%;
+  overflow-y: auto;
+}
+
+#studentList {
+  grid-area: studentList;
+  align-content: stretch;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+#studentEditor {
+  grid-area: studentEditor;
+}
+
+#footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space);
+}
+
+#footer button {
+  min-width: 45px;
+}
+
+.selectNeighbors button {
+  position: relative;
+  overflow: hidden;
+}
+
+.selectNeighbors button::after {
+  position: absolute;
+  top: -40px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  width: 64px;
+  height: 160px;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -10%;
+    transform: translateX(-100%) rotate(45deg);
+  }
+  20%,
+  100% {
+    left: 110%;
+    transform: translateX(0%) rotate(45deg);
+  }
+}
+
+.noStudent {
+  border-radius: var(--space);
+  border: 1px solid var(--color-primary-light);
+  padding: calc(2 * var(--space));
+}
+
+p {
+  max-width: 50ch;
+}
+
+.noStudent p + p {
+  margin-top: var(--space);
+}
+
+@media screen and (max-width: 700px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: calc(2 * var(--space));
+  }
+
+  #studentList {
+    padding: 0;
+  }
+
+  #footer {
+    border-top: 1px solid var(--color-primary-light);
+    padding-top: calc(2 * var(--space));
+    flex-direction: column-reverse;
+    gap: var(--space);
+    align-items: center;
+  }
+
+  #footer button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+:root {
+  --addStudentHeight: 48px;
+}
+
+.addStudent {
+  display: flex;
+  height: var(--addStudentHeight);
+}
+
+.addStudentButton {
+  width: var(--addStudentHeight);
+  margin-left: var(--space);
+}
+
+@media screen and (max-width: 700px) {
+  .addStudent {
+    top: unset;
+    bottom: 60px;
+  }
+}

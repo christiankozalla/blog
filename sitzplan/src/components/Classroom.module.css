@@ -1,0 +1,20 @@
+.board {
+  display: grid;
+  width: 85vw;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  border-top: 1px dashed var(--text-grey-400);
+  border-left: 1px dashed var(--text-grey-400);
+}
+
+.square {
+  height: calc(95vh / var(--rows));
+  border-right: 1px dashed var(--text-grey-400);
+  border-bottom: 1px dashed var(--text-grey-400);
+}
+
+@media screen and (max-width: 700px) {
+  .board {
+    width: 95vw;
+  }
+}

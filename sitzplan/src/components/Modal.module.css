@@ -1,0 +1,66 @@
+:root {
+  --modalHeaderHeight: 50px;
+}
+
+.dialog {
+  position: absolute;
+  padding: calc(2 * var(--space));
+  border-radius: var(--space);
+  box-shadow: var(--shadow-xl);
+  border: none;
+  background-color: var(--color-primary-lightest);
+  z-index: 5;
+  height: 90vh;
+  width: calc(100vw - 300px);
+  top: calc(2 * var(--space));
+  right: calc(4 * var(--space));
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: calc(2 * var(--space));
+  height: var(--modalHeaderHeight);
+}
+
+.content {
+  height: calc(100% - var(--modalHeaderHeight) - (2 * var(--space)));
+}
+
+.closeModal {
+  background-color: var(--color-attention);
+}
+
+.closeModal:active,
+.closeModal:focus {
+  outline-color: var(--color-attention);
+}
+
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(1px);
+  z-index: 3;
+}
+
+@media screen and (max-width: 700px) {
+  .dialog {
+    width: calc(100vw - 2 * var(--space));
+    right: var(--space);
+    height: auto;
+  }
+
+  .content {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --modalHeaderHeight: 100px;
+  }
+}

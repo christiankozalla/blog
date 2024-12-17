@@ -1,0 +1,48 @@
+{
+  "dimensions": {
+    "columns": 10,
+    "rows": 10
+  },
+  "fields": [
+    {
+      "isTable": true,
+      "student": {
+        "id": "3nöas",
+        "name": "Adam Ries"
+      },
+      "position": [0, 1]
+    },
+    {
+      "isTable": false,
+      "student": {
+        "id": "ipwnrp",
+        "name": "Marie Curie"
+      },
+      "position": [3, 5]
+    },
+    {
+      "isTable": true,
+      "student": {
+        "id": "espak2",
+        "name": "Albert Einstein"
+      },
+      "position": [6, 7]
+    },
+    {
+      "isTable": false,
+      "student": {
+        "id": "5apektgn",
+        "name": "Wolfgang Pauli"
+      },
+      "position": [2, 3]
+    },
+    {
+      "isTable": true,
+      "position": [8, 8]
+    },
+    {
+      "isTable": true,
+      "position": [0, 0]
+    }
+  ]
+}

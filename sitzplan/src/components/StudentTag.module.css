@@ -1,0 +1,12 @@
+.studentTag {
+  display: block;
+  border: none;
+  background-color: var(--color-primary-dark);
+  color: white;
+  border-radius: var(--space);
+  padding: var(--space);
+  margin-top: var(--space);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+}

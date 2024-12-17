@@ -1,0 +1,56 @@
+.recycleBin {
+  position: fixed;
+  width: 65px;
+  bottom: 0;
+  left: 0;
+  padding: calc(1.5 * var(--space));
+  background-color: white;
+  box-shadow: var(--shadow-xl);
+  border-radius: 0 var(--space) 0 0;
+}
+
+.icon {
+  border-radius: var(--space);
+  background-color: var(--text-grey-200);
+  padding: calc(0.5 * var(--space));
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: translateY(-3px);
+  transition: transform 150ms ease;
+}
+
+.trashedFieldsContainer {
+  position: absolute;
+  bottom: 80px;
+  left: 30px;
+  width: 200px;
+  padding: calc(2 * var(--space));
+  border-radius: var(--space);
+  box-shadow: var(--shadow-xl);
+  background-color: white;
+  z-index: 3;
+}
+
+.trashedField {
+  border: 1px solid var(--color-primary-light);
+  margin-top: var(--space);
+  list-style: none;
+}
+
+.closeTrashContentButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .recycleBin {
+    left: unset;
+    right: 0;
+    border-radius: var(--space) 0 0 0;
+    height: 60px;
+  }
+}

@@ -1,0 +1,92 @@
+.controls {
+  position: relative;
+  width: 65px;
+  box-shadow: var(--shadow-xl);
+  padding: calc(1.5 * var(--space));
+  border-radius: 0 var(--space) var(--space) 0;
+  background-color: white;
+  z-index: 4;
+}
+
+.icon {
+  border-radius: var(--space);
+  background-color: var(--text-grey-200);
+  padding: calc(0.5 * var(--space));
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: translateY(-3px);
+  transition: transform 150ms ease;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  margin-left: var(--space);
+  left: 100%;
+  width: max-content;
+  max-width: 250px;
+  padding: var(--space) calc(1.5 * var(--space));
+  border-radius: var(--space);
+  border-start-start-radius: 0;
+  border: 1px solid white;
+  background-color: var(--color-primary-dark);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms 1000ms ease;
+}
+
+.tooltip:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip + .tooltip {
+  margin-top: var(--space);
+}
+
+.addStudent {
+  position: absolute;
+  top: -60px;
+  left: 30px;
+  padding: var(--space);
+  box-shadow: var(--shadow-xl);
+  border-radius: var(--space);
+  z-index: 10;
+  background-color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .controls {
+    display: flex;
+    height: 65px;
+    border-radius: var(--space) var(--space) 0 0;
+    width: calc(49px * 4);
+  }
+
+  .tooltip {
+    width: calc(0.25 * (100% - 3 * var(--space)));
+  }
+
+  .tooltip + .tooltip {
+    margin-top: 0;
+    margin-left: var(--space);
+  }
+
+  .tooltip::before {
+    display: none;
+  }
+
+  .addStudent {
+    top: unset;
+    bottom: 60px;
+  }
+}

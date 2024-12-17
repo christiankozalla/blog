@@ -1,0 +1,23 @@
+.touchWarning {
+  border-radius: var(--space);
+  border: 1px solid var(--color-primary-light);
+  padding: calc(2 * var(--space));
+}
+
+.hint {
+  border-radius: var(--space);
+  background-color: var(--color-warning);
+  font-weight: bold;
+  padding: var(--space);
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+p {
+  line-height: 1.8;
+  max-width: 60ch;
+}
+
+p + p {
+  margin-top: calc(2 * var(--space));
+}

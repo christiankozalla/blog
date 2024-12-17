@@ -1,0 +1,64 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 var(--space) 0;
+  padding: var(--space) 0;
+  box-shadow: var(--shadow-md);
+  border-radius: 0 0 4px 0;
+  background-color: white;
+  z-index: 4;
+}
+
+.firstLine {
+  display: flex;
+}
+
+.firstLine > * {
+  margin: 0 var(--space);
+}
+
+.menuButton {
+  padding: var(--space);
+  height: calc(4 * var(--space));
+  width: calc(4 * var(--space));
+  background-color: var(--text-grey-300);
+}
+
+.menuButton::before {
+  display: block;
+  content: " ";
+  height: 2px;
+  border-radius: 3px;
+  width: 100%;
+  background-color: var(--text-grey-700);
+}
+
+.menuButton::after {
+  display: block;
+  content: " ";
+  height: 2px;
+  border-radius: 3px;
+  width: 100%;
+  background-color: var(--text-grey-700);
+  margin-top: 4px;
+}
+
+.input {
+  width: 80px;
+}
+
+.expandedMenu {
+  margin-top: var(--space);
+}
+
+.expandedMenu li {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space);
+  border-top: 1px solid var(--text-grey-300);
+}
+
+.expandedMenu li:last-child {
+  border-bottom: 1px solid var(--text-grey-300);
+}
