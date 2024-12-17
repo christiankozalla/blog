@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://christiankozalla.com",
-  outDir: "./dist",
+  outDir: "./docs", // docs are served by GitHub Pages
   integrations: [tailwind({
     applyBaseStyles: false,
   }), sitemap()],
