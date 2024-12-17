@@ -8,7 +8,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "delete-out-dir": "rm -rf ./docs",
+    "prepare-deploy": "npm run delete-out-dir && npm run build && npm -C sitzplan run build-for-blog"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.1.2",
