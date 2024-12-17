@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { DndProvider } from "react-dnd";
-import { TouchBackend } from "react-dnd-touch-backend";
+import { HTML5Backend} from "react-dnd-html5-backend";
 import { Classroom } from "./components/Classroom";
 import { Controls } from "./components/Controls";
 import { Menu } from "./components/Menu";
@@ -62,7 +62,7 @@ export default function App() {
   return (
     <>
       <Menu key={classroomKey} />
-      <DndProvider backend={TouchBackend} options={{ enableMouseEvents: true }}>
+      <DndProvider backend={HTML5Backend}>
         <div className={styles.layout}>
           <Controls handleModalOpen={handleModalOpen} />
           <Classroom key={classroomKey} />

@@ -19,7 +19,7 @@
     "jspdf": "2.5.1",
     "react": "^18",
     "react-dnd": "16.0.1",
-    "react-dnd-touch-backend": "16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18"
   },
   "devDependencies": {
