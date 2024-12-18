@@ -52,17 +52,17 @@ export const StudentEditor: FC<StudentEditorProps> = ({
             <tr>
               <td>{field.student.name}</td>
               <td>
-                {field.student.row
-                  ? field.student.row === "first"
-                    ? "erste"
-                    : "letzte"
-                  : "-"}
-              </td>
-              <td>
                 {field.student.gender
                   ? field.student.gender === "male"
                     ? "Junge"
                     : "Mädchen"
+                  : "-"}
+              </td>
+              <td>
+                {field.student.row
+                  ? field.student.row === "first"
+                    ? "erste"
+                    : "letzte"
                   : "-"}
               </td>
               <td>{field.student.alone ? "Ja" : "Nein"}</td>
