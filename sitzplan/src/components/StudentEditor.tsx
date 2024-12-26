@@ -1,7 +1,7 @@
-import { FC, ChangeEvent, SetStateAction, Dispatch } from "react";
 import { controller } from "../App";
 import { CheckboxSwitch } from "./CheckboxSwitch";
-import { Field, Student } from "../lib/Model";
+import type { FC, ChangeEvent, SetStateAction, Dispatch } from "react";
+import type { Field, Student } from "../lib/Model";
 import styles from "./StudentEditor.module.css";
 
 interface StudentEditorProps {
@@ -22,7 +22,7 @@ export const StudentEditor: FC<StudentEditorProps> = ({
     const hasChecked = (
       e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
     ): e is ChangeEvent<HTMLInputElement> =>
-      e.currentTarget.hasOwnProperty("checked");
+      "checked" in e.currentTarget;
 
     if (field.student) {
       controller.setStudent(field.id, {
@@ -137,6 +137,7 @@ export const StudentEditor: FC<StudentEditorProps> = ({
             Wähle aus, neben wem der Schüler:in nicht sitzen darf
           </p>
           <button
+            type="button"
             className={styles.selectForbiddenNeighborsButton}
             disabled={field.student.alone}
             onClick={() =>
@@ -144,23 +145,18 @@ export const StudentEditor: FC<StudentEditorProps> = ({
                 prevId === field.id ? "" : field.id
               )
             }
-            dangerouslySetInnerHTML={{
-              __html:
-                selectNeighborsForId === field.id
-                  ? "&times;"
-                  : "Verbotene Sitznachbarn wählen",
-            }}
             style={{
               backgroundColor:
                 selectNeighborsForId === field.id
                   ? "var(--color-attention)"
                   : "var(--color-primary-dark)",
             }}
-          />
+          >{selectNeighborsForId === field.id
+            ? "&times;"
+            : "Verbotene Sitznachbarn wählen"}</button>
         </div>
       </div>
     );
-  } else {
-    return null;
   }
+  return null;
 };
