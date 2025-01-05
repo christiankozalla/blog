@@ -9,6 +9,9 @@ export default defineConfig({
   integrations: [tailwind({
     applyBaseStyles: false,
   }), sitemap()],
+  build: {
+    assets: "astro-assets",
+  },
   vite: {
     build: {
       assetsInlineLimit: 1024
