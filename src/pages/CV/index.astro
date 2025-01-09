@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 import "../../styles/cv.css";
 ---
 
@@ -67,7 +67,7 @@ import "../../styles/cv.css";
                                 />
                                 <div>
                                     <address class="not-italic">
-                                         08371 Glauchau
+                                        08371 Glauchau
                                     </address>
                                 </div>
                             </div>
@@ -269,9 +269,13 @@ import "../../styles/cv.css";
                     <div id="profile" class="prose">
                         <h2 class="section-headline">Profile</h2>
                         <p>
-                            I am a web developer with TypeScript as my main language, bringing deep experience in the JavaScript ecosystem in both frontend and Node.js or Deno.
-                            With a hands-on mentality I am able to weild the force of Next.js, Nuxt, Remix, React, Vue, and Astro.
-                            Furthermore I am gaining proficiency in Go and DevOps.
+                            I am a web developer with TypeScript as my main
+                            language, bringing deep experience in the JavaScript
+                            ecosystem in both frontend and Node.js or Deno. With
+                            a hands-on mentality I am able to weild the force of
+                            Next.js, Nuxt, Remix, React, Vue, and Astro.
+                            Furthermore I am gaining proficiency in Go and
+                            DevOps.
                         </p>
                         <p class="mt-4">
                             I am highly motivated in expanding my horizons day
@@ -284,7 +288,7 @@ import "../../styles/cv.css";
                         <h2 class="section-headline">Experience</h2>
                         <div>
                             <h3 class="font-semibold mb-2">
-                                GK Software - retail7
+                                GK Software - RETAIL7
                             </h3>
                             <section class="mb-6">
                                 <h4 class="hidden">Position</h4>
@@ -306,9 +310,8 @@ import "../../styles/cv.css";
                                 <div class="lg:inline-block lg:w-8/12 w-full">
                                     <ul class="list-disc">
                                         <li>
-                                            Further development of a
-                                            POS system that runs on almost all
-                                            devices.
+                                            Further development of a POS system
+                                            that runs on almost all devices.
                                         </li>
                                         <li>
                                             Development with TypeScript, Vue,
@@ -387,9 +390,9 @@ import "../../styles/cv.css";
                                 <div class="lg:inline-block lg:w-8/12 w-full">
                                     <ul class="list-disc">
                                         <li>
-                                            New and further development of a booking
-                                            route for the basic and pro tariffs
-                                            of an app.
+                                            New and further development of a
+                                            booking route for the basic and pro
+                                            tariffs of an app.
                                         </li>
                                         <li>
                                             Develop an API facade using Nest.js
@@ -397,7 +400,8 @@ import "../../styles/cv.css";
                                             front- and back-end applications.
                                         </li>
                                         <li>
-                                            Development of e-commerce features in the frontend
+                                            Development of e-commerce features
+                                            in the frontend
                                         </li>
                                     </ul>
                                 </div>
@@ -531,11 +535,130 @@ import "../../styles/cv.css";
                                 id="sitzplan-headline"
                                 class="font-semibold mb-2"
                             >
+                                Stock Trend Strategy
+                            </h3>
+                            <section class="my-6">
+                                <h3 class="hidden">Description</h3>
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Calculation of Buy Signals based on the
+                                    Elder Force Index (EMA + MACD)
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <p class="my-2">
+                                        <strong
+                                            >Deno Worker + FastAPI server +
+                                            React Frontend</strong
+                                        ><br />
+                                        OHLC daily candles of S&P500 and NASDAQ100
+                                        stocks are downloaded daily from the Alpaca
+                                        API. Based on the OHLC daily candles, buy
+                                        signals are calculated and persisted in an
+                                        SQLite database. The signals can be 'backtested'
+                                        in the frontend with various parameters (Risk-Reward
+                                        Ratio, Exit Criteria) to evaluate signal
+                                        performance. Currently, the stock chart is
+                                        displayed in the React frontend using the
+                                        Google-Charts library.
+                                    </p>
+                                </div>
+                            </section>
+                            <section class="mb-6">
+                                <h3 class="hidden">
+                                    Stock Trend Strategy Code Repository
+                                </h3>
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Code on:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <a
+                                        class="block pb-2 underline text-green-500"
+                                        href="https://github.com/christiankozalla/stock-trend-strategy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        GitHub/stock-trend-strategy
+                                    </a>
+                                </div>
+                            </section>
+                            <section class="mb-6">
+                                <h3 class="hidden">
+                                    Stock Trend Strategy Details
+                                </h3>
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Features:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <ul class="list-disc">
+                                        <li>Integration with Alpaca API</li>
+                                        <li>
+                                            Cron Job for daily download of stock
+                                            prices, persistence on the file
+                                            system, signal calculation, and
+                                            persistence in SQLite
+                                        </li>
+                                        <li>
+                                            GitHub Action for deployment on the
+                                            server
+                                        </li>
+                                        <li>
+                                            SVG-Chart of stock prices
+                                            (OHLC-candles), built with the Visx
+                                            library
+                                        </li>
+                                        <li>SVG-Chart of backtested signals</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="mb-6">
+                                <h3 class="hidden">
+                                    Stock Trend Strategy is built with
+                                </h3>
+                                <div
+                                    class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
+                                >
+                                    Built with:
+                                </div>
+                                <div class="lg:inline-block lg:w-8/12 w-full">
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >React</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >TypeScript</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Deno</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Python, FastAPI</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >PostgreSQL</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >SQLite</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >GitHub Actions</span
+                                    >
+                                    <span class="rounded-xl bg-gray-300 px-3"
+                                        >Caddy</span
+                                    >
+                                </div>
+                            </section>
+                        </div>
+                        <div class="mb-16 page-break-not-internal">
+                            <h3
+                                id="sitzplan-headline"
+                                class="font-semibold mb-2"
+                            >
                                 School Seating Plan
                             </h3>
-                            <p class="text-sm italic ml-10">
-                                Still in development
-                            </p>
                             <section class="my-6">
                                 <h3 class="hidden">Description</h3>
                                 <div
@@ -573,7 +696,7 @@ import "../../styles/cv.css";
                                         </li>
                                     </ul>
                                 </div>
-                                <section class="mb-6">
+                                <section class="mt-6 mb-2">
                                     <h3 class="hidden">
                                         School Seating Plan App Code Repository
                                     </h3>
@@ -597,25 +720,23 @@ import "../../styles/cv.css";
                                 </section>
                                 <section class="mb-6">
                                     <h3 class="hidden">
-                                        School Seating Plan Landing Page Code
-                                        Repository
+                                        School Seating Plan App
                                     </h3>
                                     <div
                                         class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
                                     >
-                                        Code on:
+                                        App deployed to:
                                     </div>
                                     <div
                                         class="lg:inline-block lg:w-8/12 w-full"
                                     >
                                         <a
                                             class="block pb-2 underline text-green-500"
-                                            href="https://github.com/christiankozalla/sitzplan-landing"
+                                            href="https://christiankozalla.com/sitzplan"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            GitHub/sitzplan-landing (Landing
-                                            Page)
+                                            https://christiankozalla.com/sitzplan
                                         </a>
                                     </div>
                                 </section>
@@ -705,192 +826,17 @@ import "../../styles/cv.css";
                                     </div>
                                 </section>
                             </section>
-
-                            <div class="mb-16 page-break-not-internal">
-                                <h3
-                                    id="sitzplan-headline"
-                                    class="font-semibold mb-2"
-                                >
-                                    Stock Trend Strategy
-                                </h3>
-                                <p class="text-sm italic ml-10">
-                                    In Development
-                                </p>
-                                <section class="my-6">
-                                    <h3 class="hidden">Description</h3>
-                                    <div
-                                        class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
-                                    >
-                                        Calculation of Buy Signals based on the
-                                        Elder Force Index (EMA + MACD)
-                                    </div>
-                                    <div
-                                        class="lg:inline-block lg:w-8/12 w-full"
-                                    >
-                                        <p class="my-2">
-                                            <strong
-                                                >Deno Worker + FastAPI server +
-                                                React Frontend</strong
-                                            ><br />
-                                             OHLC daily candles of S&P500 and
-                                            NASDAQ100 stocks are downloaded
-                                            daily from the Alpaca API. Based on
-                                            the OHLC daily candles, buy signals
-                                            are calculated and persisted in an
-                                            SQLite database. The signals can be
-                                            'backtested' in the frontend with
-                                            various parameters (Risk-Reward
-                                            Ratio, Exit Criteria) to evaluate
-                                            signal performance. Currently, the
-                                            stock chart is displayed in the
-                                            React frontend using the
-                                            Google-Charts library.
-                                        </p>
-                                    </div>
-                                </section>
-                                <section class="mb-6">
-                                    <h3 class="hidden">
-                                        Stock Trend Strategy Code Repository
-                                    </h3>
-                                    <div
-                                        class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
-                                    >
-                                        Code on:
-                                    </div>
-                                    <div
-                                        class="lg:inline-block lg:w-8/12 w-full"
-                                    >
-                                        <a
-                                            class="block pb-2 underline text-green-500"
-                                            href="https://github.com/christiankozalla/stock-trend-strategy"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            GitHub/stock-trend-strategy
-                                        </a>
-                                    </div>
-                                </section>
-                                <section class="mb-6">
-                                    <h3 class="hidden">
-                                        Stock Trend Strategy Details
-                                    </h3>
-                                    <div
-                                        class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
-                                    >
-                                        Features:
-                                    </div>
-                                    <div
-                                        class="lg:inline-block lg:w-8/12 w-full"
-                                    >
-                                        <ul class="list-disc">
-                                            <li>Integration with Alpaca API</li>
-                                            <li>
-                                                Cron Job for daily download of
-                                                stock prices, persistence on the
-                                                file system, signal calculation,
-                                                and persistence in SQLite
-                                            </li>
-                                            <li>
-                                                GitHub Action for deployment on
-                                                the server
-                                            </li>
-                                            <li>
-                                                SVG-Chart of stock prices
-                                                (OHLC-candles), built with the
-                                                Visx library
-                                            </li>
-                                            <li>
-                                                SVG-Chart of backtested signals
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </section>
-                                <section class="mb-6">
-                                    <h3 class="hidden">
-                                        Stock Trend Strategy is built with
-                                    </h3>
-                                    <div
-                                        class="lg:inline-block lg:w-3/12 lg:align-top italic mb-2"
-                                    >
-                                        Built with:
-                                    </div>
-                                    <div
-                                        class="lg:inline-block lg:w-8/12 w-full"
-                                    >
-                                        <span
-                                            class="rounded-xl bg-gray-300 px-3"
-                                            >React</span
-                                        >
-                                        <span
-                                            class="rounded-xl bg-gray-300 px-3"
-                                            >TypeScript</span
-                                        >
-                                        <span
-                                            class="rounded-xl bg-gray-300 px-3"
-                                            >Deno</span
-                                        >
-                                        <span
-                                            class="rounded-xl bg-gray-300 px-3"
-                                            >Python, FastAPI</span
-                                        >
-                                        <span
-                                            class="rounded-xl bg-gray-300 px-3"
-                                            >PostgreSQL</span
-                                        >
-                                        <span
-                                            class="rounded-xl bg-gray-300 px-3"
-                                            >SQLite</span
-                                        >
-                                        <span
-                                            class="rounded-xl bg-gray-300 px-3"
-                                            >GitHub Actions</span
-                                        >
-                                        <span
-                                            class="rounded-xl bg-gray-300 px-3"
-                                            >Caddy</span
-                                        >
-                                    </div>
-                                </section>
-                            </div>
-<!-- 
-                            <hr class="mt-8 mb-12" />
-                            <div id="skills" class="prose">
-                                <h2 class="section-headline">
-                                    Expand my skills
-                                </h2>
-                                <div class="mb-16">
-                                    <h3 class="hidden">In the future</h3>
-                                    <h4 id="expand-knowledge-headline">
-                                        I'd like to expand my skills and
-                                        knowledge in several fields
-                                    </h4>
-                                    <ul class="list-disc">
-                                        <li>
-                                            Testing, e.g. with Jest, Cypress
-                                        </li>
-                                        <li>
-                                            Backend development with JS/TS,
-                                            Golang, Docker, SQL
-                                        </li>
-                                        <li>GitHub Actions, GitLab CI</li>
-                                        <li>
-                                            Web Components, e.g. with StencilJS,
-                                            LitElement
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
             </main>
-            <footer class="mt-12 text-center">
-                <a
-                    href="/CV/de/"
-                    class="text-sm px-4 py-2 text-gray-600 border-gray-400 border-2 border-b-0 rounded-t-lg"
-                    >Switch to German Lebenslauf</a
-                >
-            </footer>
         </div>
+        <footer class="mt-12 text-center">
+            <a
+                href="/CV/de/"
+                class="text-sm px-4 py-2 text-gray-600 border-gray-400 border-2 border-b-0 rounded-t-lg"
+                >Switch to German Lebenslauf</a
+            >
+        </footer>
     </body>
 </html>
