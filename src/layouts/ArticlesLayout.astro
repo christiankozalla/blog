@@ -1,0 +1,45 @@
+---
+import { ClientRouter } from "astro:transitions";
+import "../styles/pico.classless.green.min.css";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="icon"
+            type="image/png"
+            href={`${import.meta.env.BASE_URL}favicon-16x16.png`}
+        />
+        <meta name="robots" content="index,follow" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="canonical" href={Astro.url.toString()} />
+        <title>{title}</title>
+        <ClientRouter />
+    </head>
+    <body>
+        <article>
+            <h1>{title}</h1>
+            <slot />
+        </article>
+    </body>
+</html>
+<style>
+    article {
+        margin: 0 auto;
+        width: 80vw;
+        max-width: 900px;
+    }
+
+    @media (max-width: 400px) {
+        article {
+            box-shadow: unset;
+            margin: unset;
+            width: 100%;
+            padding: 0 12px;
+        }
+    }
+</style>

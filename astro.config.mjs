@@ -1,20 +1,21 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://christiankozalla.com",
   outDir: "./docs", // docs are served by GitHub Pages
-  integrations: [tailwind({
-    applyBaseStyles: false,
-  }), sitemap()],
+  integrations: [sitemap()],
   build: {
     assets: "astro-assets",
   },
   vite: {
     build: {
       assetsInlineLimit: 1024
-    }
+    },
+
+    plugins: [tailwindcss()]
   }
 });
